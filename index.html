@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1 class="title">Thala for a Reason</h1>
+    <form action="" method="">
+        <input id="inputText" type="Enter something intrestion" class="input-key" autocomplete="off">
+        <button type="submit" onclick="Clicked()" class="btn">Click me!</button>
+    </form>
+
     <script src="script.js"></script>
+    <script>
+        function Clicked() {
+            let inputData = document.getElementById("inputText").value;
+            getInputText(inputData);
+        }
+    </script>
 </body>
 </html>
