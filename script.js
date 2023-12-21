@@ -1,3 +1,5 @@
+let currentAudio;
+
 let inputKey = document.getElementById("inputText")
 inputKey.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -6,10 +8,20 @@ inputKey.addEventListener("keypress", function(event) {
     }
 });
 
+
 function getInputText(){
     document.querySelector('body').style.backgroundImage = 'none'; // removing bg
     let inputData = document.getElementById("inputText").value;
+
+    if (currentAudio) {
+        currentAudio.pause();
+    }
+
     if(inputData.length == 7 || inputData == 7){
+
+        currentAudio = new Audio('/src/bolejokoyal.mp3');
+        currentAudio.play();
+
         playThala("/src/dhoni.mp4")
         if(inputData.length>1){
             const reasonText = inputData.toUpperCase().split("").join(" + ")
@@ -18,6 +30,10 @@ function getInputText(){
             document.querySelector(".reason").innerHTML = `${finalResult}`
         }
     }else{
+        
+        currentAudio = new Audio('/src/moyemoye.mp3');
+        currentAudio.play();
+
         playThala("/src/jayshah2.mp4")
         document.querySelector(".reason").innerHTML = "Not a Thala"
     }
@@ -35,5 +51,6 @@ function playThala(source){
         video.muted = true
     } )
 }
+
 
 
