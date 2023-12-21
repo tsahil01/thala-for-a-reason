@@ -18,24 +18,20 @@ function getInputText(){
     }
 
     if(inputData.length == 7 || inputData == 7){
-
-        currentAudio = new Audio('/src/bolejokoyal.mp3');
-        currentAudio.play();
-
         playThala("/src/dhoni.mp4")
         if(inputData.length>1){
             const reasonText = inputData.toUpperCase().split("").join(" + ")
             reasonText.concat(" = 7")
             const finalResult = reasonText.concat(" = 7")
             document.querySelector(".reason").innerHTML = `${finalResult}`
+            currentAudio = new Audio('/src/bolejokoyal.mp3');
+            currentAudio.play();
         }
     }else{
-        
-        currentAudio = new Audio('/src/moyemoye.mp3');
-        currentAudio.play();
-
         playThala("/src/jayshah2.mp4")
         document.querySelector(".reason").innerHTML = "Not a Thala"
+        currentAudio = new Audio('/src/moyemoye.mp3');
+        currentAudio.play();
     }
 }
 
