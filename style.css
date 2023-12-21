@@ -1,24 +1,25 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+*{ padding: 0; margin: 0;}
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/src/bg.webp);
+    background-color: black;
+    /* background-image: url(/src/bg.webp); */
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    display: flex;
+    flex-direction: row; /* This sets the main axis to be horizontal (from left to right) */
+    justify-content: space-around; /* Align items with space around them */
+    align-items: center;
+    height: 100vh;
 }
-
 .title{
     text-align: center;
     color: #d7cf2d;
     font-size: 80px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-
-.form{
-    margin-top: 100px;
+.input-div{
+    margin-top: 30px;
     text-align: center;
 }
 .input-key{
@@ -31,11 +32,24 @@ body{
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif 
 }
-
 input:focus {
     outline: none;
 }
-
 .btn{
     display: none;
+}
+.thala-video video{
+    justify-content: space-around; /* Align items with space around them */
+    align-items: center; /* Center items vertically */
+    height: 99vh;
+}
+
+.reason{
+    margin-top: 50px;
+    text-align: center;
+    color: #d7cf2d;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
 }

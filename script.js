@@ -17,7 +17,7 @@ function getInputText(){
             document.querySelector(".reason").innerHTML = `${finalResult}`
         }
     }else{
-        alert("NOT A THALA")
+        document.querySelector(".reason").innerHTML = "Not a Thala"
     }
 }
 
@@ -26,6 +26,7 @@ function playThala(source){
     const videoElementclass = document.querySelectorAll('.thala-video')
     videoElementclass.forEach( (element) =>{
         const video = document.createElement('video')
+        element.innerHTML = '';
         element.appendChild(video)
         video.setAttribute("src", `${source}`)
         video.setAttribute("autoplay", true);
