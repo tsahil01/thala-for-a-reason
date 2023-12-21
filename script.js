@@ -44,6 +44,7 @@ function playThala(source){
         element.appendChild(video)
         video.setAttribute("src", `${source}`)
         video.setAttribute("autoplay", true);
+        video.setAttribute("preload", "auto"); // Add preload attribute
         video.muted = true
         video.addEventListener('canplay', function() {
             // Video is ready to play, you can handle the display logic here
