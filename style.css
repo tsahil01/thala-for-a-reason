@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: black;
-    /* background-image: url(/src/bg.webp); */
+    background-image: url(/src/bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -42,6 +42,7 @@ input:focus {
     justify-content: space-around; /* Align items with space around them */
     align-items: center; /* Center items vertically */
     height: 99vh;
+    border-radius: 10px;
 }
 
 .reason{

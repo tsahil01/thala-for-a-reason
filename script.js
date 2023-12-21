@@ -7,16 +7,18 @@ inputKey.addEventListener("keypress", function(event) {
 });
 
 function getInputText(){
+    document.querySelector('body').style.backgroundImage = 'none'; // removing bg
     let inputData = document.getElementById("inputText").value;
     if(inputData.length == 7 || inputData == 7){
-        playThala("/src/thala.mp4")
+        playThala("/src/dhoni.mp4")
         if(inputData.length>1){
-            const reasonText = inputData.split("").join(" + ")
+            const reasonText = inputData.toUpperCase().split("").join(" + ")
             reasonText.concat(" = 7")
             const finalResult = reasonText.concat(" = 7")
             document.querySelector(".reason").innerHTML = `${finalResult}`
         }
     }else{
+        playThala("/src/jayshah2.mp4")
         document.querySelector(".reason").innerHTML = "Not a Thala"
     }
 }
