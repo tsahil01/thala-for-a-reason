@@ -24,9 +24,9 @@ function getInputText(){
             reasonText.concat(" = 7")
             const finalResult = reasonText.concat(" = 7")
             document.querySelector(".reason").innerHTML = `${finalResult}`
-            currentAudio = new Audio('/src/1.mp3');
-            currentAudio.play();
         }
+        currentAudio = new Audio('/src/1.mp3');
+        currentAudio.play();
     }else{
         playThala("/src/jayshah.mp4")
         document.querySelector(".reason").innerHTML = "Not a Thala"
