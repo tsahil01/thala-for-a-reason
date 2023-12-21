@@ -49,7 +49,7 @@ function playThala(source){
             // Video is ready to play, you can handle the display logic here
             video.play();
         });
-    } )
+    } );
 }
 
 
