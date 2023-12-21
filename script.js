@@ -27,14 +27,11 @@ function getInputText(){
             document.querySelector(".reason").innerHTML = ""
             document.querySelector(".reason").innerHTML = `${finalResult}`
         }
-        currentAudio = new Audio('/src/1.mp3');
-        currentAudio.play();
     }else{
         playThala("/src/jayshah.mp4")
         document.querySelector(".reason").innerHTML = ""
         document.querySelector(".reason").innerHTML = "Not a Thala"
-        currentAudio = new Audio('/src/2.mp3');
-        currentAudio.play();
+        
     }
 }
 
@@ -62,6 +59,15 @@ function playThala(source){
             
             // Play the video
             video.play();
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+            if (source.includes('dhoni.mp4')) {
+                currentAudio = new Audio('/src/bolejokoyal.mp3');
+            }else {
+                currentAudio = new Audio('/src/moyemoye.mp3');
+            }
+            currentAudio.play();
         });
 
         // Handle video loading errors
