@@ -21,8 +21,7 @@ function getInputText(){
     if(inputData.length == 7 || inputData == 7){
         playThala("/src/dhoni.mp4")
         if(inputData.length>1){
-            const reasonText = inputData.toUpperCase().split("").join(" + ")
-            reasonText.concat(" = 7")
+            const reasonText = inputData.toUpperCase().split("").join("+")
             const finalResult = reasonText.concat(" = 7")
             document.querySelector(".reason").innerHTML = ""
             document.querySelector(".reason").innerHTML = `${finalResult}`
