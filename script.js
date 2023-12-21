@@ -24,13 +24,13 @@ function getInputText(){
             reasonText.concat(" = 7")
             const finalResult = reasonText.concat(" = 7")
             document.querySelector(".reason").innerHTML = `${finalResult}`
-            currentAudio = new Audio('/src/bolejokoyal.mp3');
+            currentAudio = new Audio('/src/1.mp3');
             currentAudio.play();
         }
     }else{
-        playThala("/src/jayshah2.mp4")
+        playThala("/src/jayshah.mp4")
         document.querySelector(".reason").innerHTML = "Not a Thala"
-        currentAudio = new Audio('/src/moyemoye.mp3');
+        currentAudio = new Audio('/src/2.mp3');
         currentAudio.play();
     }
 }
