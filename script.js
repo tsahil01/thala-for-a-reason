@@ -45,6 +45,10 @@ function playThala(source){
         video.setAttribute("src", `${source}`)
         video.setAttribute("autoplay", true);
         video.muted = true
+        video.addEventListener('canplay', function() {
+            // Video is ready to play, you can handle the display logic here
+            video.play();
+        });
     } )
 }
 
